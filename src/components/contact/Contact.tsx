@@ -91,7 +91,7 @@ const Contact = () => {
           <BsLinkedin />
         </a>
         <a
-          href="https://github.com/IlyesArous"
+          href="https://github.com/ilyesarous"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
@@ -100,7 +100,7 @@ const Contact = () => {
           <BsGithub />
         </a>
         <a
-          href="tel:+21622222222"
+          href="tel:+21621503300"
           className="social-icon"
           aria-label="Phone"
         >
