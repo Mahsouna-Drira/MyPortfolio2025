@@ -8,6 +8,7 @@ import Home from "./components/home/Home";
 import NavBar from "./components/navbar/NavBar";
 import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Contact/>
       <Footer />
       <Analytics/>
+      <SpeedInsights/>
     </>
   );
 }
