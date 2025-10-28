@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import About from "./components/about/About";
 import Certifications from "./components/certifications/Certifications";
 import Contact from "./components/contact/Contact";
@@ -20,6 +21,7 @@ function App() {
       <Projects />
       <Contact/>
       <Footer />
+      <Analytics/>
     </>
   );
 }
