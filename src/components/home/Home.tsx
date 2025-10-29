@@ -51,7 +51,7 @@ const Home = () => {
 
       <div className="flex-2 bg-white/5 p-6 rounded-2xl shadow-2xl max-w-md">
         <div className="border-8 border-white/10 rounded-b-full overflow-hidden">
-          <img src={profilePic} alt="profile" className="rounded-b-full " />
+          <img src={profilePic} alt="profile" width={400} height={300} className="rounded-b-full " />
         </div>
       </div>
     </div>
