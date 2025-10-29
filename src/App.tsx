@@ -5,7 +5,7 @@ import NavBar from "./components/navbar/NavBar";
 import Skeleton from "./tools/Skeleton";
 import ScrollToTopButton from "./tools/ScrollToTopButton";
 
-const Home = React.lazy(() => import("./components/home/Home"));
+import Home from "./components/home/Home";
 const About = React.lazy(() => import("./components/about/About"));
 const Skills = React.lazy(() => import("./components/skills/Skills"));
 const Certifications = React.lazy(() => import("./components/certifications/Certifications"));
