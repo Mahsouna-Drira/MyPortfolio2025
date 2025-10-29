@@ -79,9 +79,9 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-section">
-      <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
+      <p className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
         Projects
-      </h2>
+      </p>
       <div className="projects-grid">
         {projects.map((p, i) => (
           <article

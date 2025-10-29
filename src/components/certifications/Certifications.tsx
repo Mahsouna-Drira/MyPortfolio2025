@@ -64,9 +64,9 @@ const Certifications = () => {
 
   return (
     <div id="certification" className="certifications-container">
-      <h2 className="certifications-title text-4xl md:text-5xl font-bold text-white text-center mb-12">
+      <p className="certifications-title text-4xl md:text-5xl font-bold text-white text-center mb-12">
         Certifications
-      </h2>
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {certifications.map((cert, index) => (
           <div

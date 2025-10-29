@@ -19,7 +19,7 @@ const Skeleton = () => {
       } bg-linear-to-b from-[#1a2a4f] via-[#111827] to-black`}
     >
       {/* Animated Welcome text */}
-      <h1 className="text-5xl sm:text-6xl font-bold tracking-wide">
+      <p className="text-5xl sm:text-6xl font-bold tracking-wide">
         <span className="inline-block animate-fade-in-up">W</span>
         <span className="inline-block animate-fade-in-up delay-[100ms]">e</span>
         <span className="inline-block animate-fade-in-up delay-[200ms]">l</span>
@@ -28,7 +28,7 @@ const Skeleton = () => {
         <span className="inline-block animate-fade-in-up delay-[500ms]">m</span>
         <span className="inline-block animate-fade-in-up delay-[600ms]">e</span>
         <span className="inline-block animate-fade-in-up delay-[700ms]">!</span>
-      </h1>
+      </p>
 
       <p className="text-gray-400 mt-4 text-lg sm:text-xl animate-fade-in delay-[1000ms]">
         Loading portfolio...

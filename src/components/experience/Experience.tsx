@@ -11,9 +11,9 @@ const Experience = () => {
 
   return (
     <div id="experience" className="experience-container">
-      <h2 className="certifications-title text-4xl md:text-5xl font-bold text-white text-center mb-12">
+      <p className="certifications-title text-4xl md:text-5xl font-bold text-white text-center mb-12">
         Experience
-      </h2>
+      </p>
 
       <div className="timeline">
         {EXPERIENCES.map((exp, idx) => (

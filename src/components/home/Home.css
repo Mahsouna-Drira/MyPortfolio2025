@@ -32,12 +32,12 @@
     height: auto !important;
   }
 
-  .home-container h1 {
+  .home-container p {
     font-size: 3rem !important;
     text-align: center;
   }
 
-  .home-container h2 {
+  .home-container p {
     text-align: center;
   }
 
