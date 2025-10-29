@@ -1,0 +1,27 @@
+.experience-card {
+  position: relative;
+  color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.exp-details-wrapper {
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.4s ease;
+}
+
+.exp-details {
+  margin-top: 1rem;
+  transition: opacity 0.4s ease;
+}
+
+.expanded .exp-details {
+  opacity: 1;
+}

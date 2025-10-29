@@ -6,7 +6,7 @@
   padding: 0.75rem;
   border-radius: 9999px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(to right, #1a2a4f, #111827);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   cursor: pointer;
   overflow: hidden;
@@ -39,7 +39,7 @@
 .scroll-top-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  background: linear-gradient(to left, #1a2a4f, #111827);
+  /* background: linear-gradient(to left, #1a2a4f, #111827); */
 }
 
 /* Visibility transitions (handled by Tailwind classes in JSX) */
