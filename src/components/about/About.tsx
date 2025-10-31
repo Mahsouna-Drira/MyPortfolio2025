@@ -1,5 +1,5 @@
 import "./About.css";
-import profilePic from "../../assets/images/profilePic.png";
+import profilePic from "../../assets/images/profilePic.webp";
 
 const About = () => {
   const list = [

@@ -1,5 +1,5 @@
 import "./Home.css";
-import profilePic from "../../assets/images/profilePic.png";
+import profilePic from "../../assets/images/profilePic.webp";
 import cv from "../../assets/pdf/cv.pdf";
 import CustomButton from "../../tools/buttons/CustomButton";
 import { HiDownload } from "react-icons/hi";
