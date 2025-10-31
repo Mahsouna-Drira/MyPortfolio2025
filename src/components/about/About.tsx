@@ -16,7 +16,7 @@ const About = () => {
     >
       <div className="bg-white/5 p-6 rounded-2xl shadow-2xl max-w-md">
         <div className="border-8 border-white/10 rounded-b-full overflow-hidden">
-          <img src={profilePic} alt="profile" className="rounded-b-full " />
+          <img src={profilePic} alt="profile" className="rounded-b-full" loading="eager" />
         </div>
       </div>
       <div className="flex flex-col gap-6">
