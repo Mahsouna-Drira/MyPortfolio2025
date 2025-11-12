@@ -1,10 +1,10 @@
 import "./About.css";
-import profilePic from "../../assets/images/profilePic.webp";
+import profilePic from "../../assets/images/me.jpg";
 
 const About = () => {
   const list = [
-    {text: "Problem Solver"},
-    {text: "Detail-Oriented"},
+    {text: "Analytical Thinker"},
+    {text: "Innovative Mindset"},
     {text: "Fast Learner"},
     {text: "Team Player"},
   ];
@@ -22,12 +22,18 @@ const About = () => {
       <div className="flex flex-col gap-6">
         <p className="text-5xl font-bold text-white">About Me</p>
         <p className="text-lg font-semibold text-gray-500 max-w-xl text-justify">
-          Hey! I’m Ilyes Arous, a Cloud Engineering student who loves building
-          modern web apps and exploring the world of DevOps. I enjoy working
-          with tools like React, Spring Boot, Laravel, Docker, and Kubernetes to
-          turn ideas into scalable, real-world projects. I’m always curious to
-          learn new tech, automate processes, and create smooth, reliable user
-          experiences.
+          Hey! I’m Mahassen Drira, a Software Engineering student driven by curiosity for 
+          data, artificial intelligence, and technology innovation. 
+          <br></br>
+          I’m passionate about transforming information into meaningful insights 
+          and exploring how intelligent systems can solve real-world challenges.
+          <br></br>
+          With a creative yet analytical mindset, I enjoy learning new tools, 
+          exploring emerging technologies, and contributing to projects where data, 
+          creativity, and impact meet. 
+          <br></br>
+          My goal is to build a career that connects innovation with purpose,
+          empowering smarter and more sustainable solutions for the future.
         </p>
         <div className="grid grid-cols-2 gap-3 mt-4">
           {list.map((item, index) => (

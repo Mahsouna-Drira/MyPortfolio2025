@@ -39,11 +39,11 @@ const Footer = () => {
           </button>
         </nav>
         <div className="footer-credits">
-          <p>© 2025 Ilyes Arous</p>
+          <p>© 2025 Mahassen Drira</p>
           <p className="built-with">
-            Built with <span className="tech">React 19</span> •{" "}
-            <span className="tech">Tailwind CSS</span> •{" "}
-            <span className="tech">Framer Motion</span>
+            <span className="tech">A passionate</span> •{" "}
+            <span className="tech">Software Engineering</span> •{" "}
+            <span className="tech">Student</span>
           </p>
         </div>
       </div>

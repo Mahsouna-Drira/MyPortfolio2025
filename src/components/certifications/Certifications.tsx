@@ -1,12 +1,7 @@
-import { FaLinux } from "react-icons/fa";
-import "./Certifications.css";
-import {
-  SiAmazon,
-  SiDocker,
-  SiOracle,
-  SiHedera,
-} from "react-icons/si";
-import { TbCertificate } from "react-icons/tb";
+import "./Certifications.css"; 
+import { SiScrumalliance, SiPython, SiDuolingo } from "react-icons/si";
+import { TbAward } from "react-icons/tb";
+import { FaUniversity } from "react-icons/fa";
 
 interface Certification {
   title: string;
@@ -16,62 +11,85 @@ interface Certification {
   link: string;
 }
 
+interface Scholarship {
+  title: string;
+  issuer: string;
+  description: string;
+  date: string;
+  icon: React.ReactNode;
+}
+
+interface Language {
+  name: string;
+  level: string;
+}
+
 const Certifications = () => {
+  // ✅ Certifications Section
   const certifications: Certification[] = [
     {
-      title: "AWS Academy Graduate - Cloud Operations",
-      issuer: "Amazon Web Services",
-      icon: <SiAmazon className="text-4xl" />,
-      date: "2025",
-      link: "https://www.credly.com/badges/d9095b3b-716e-4d31-92a6-b984d68147bb/linked_in_profile"
+      title: "IT Specialist – Python",
+      issuer: "Certiport - A Pearson VUE Business",
+      icon: <SiPython className="text-4xl text-yellow-400" />,
+      date: "Issued Oct 2024",
+      link: "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=471&cvid=YDam4alRVHSb7JJVh/A5Ig==",
     },
     {
-      title: "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
-      issuer: "Oracle",
-      icon: <SiOracle className="text-4xl" />,
-      date: "2025",
-      link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=C5D40930A2F91B292BB3AF98CB941B48C6929D79CD4A1F441C4F99DC60531BDB"
+      title: "Scrum Fundamentals Certified",
+      issuer: "Vabro.ai and VMEdu.com (Scrum/Kanban/AI/Business)",
+      icon: <SiScrumalliance className="text-4xl text-blue-400" />,
+      date: "Issued Nov 2024",
+      link: "https://www.scrumstudy.com/certification/",
     },
     {
-      title: "Aviartix Multicloud Network Associate",
-      issuer: "Aviartix",
-      icon: <TbCertificate className="text-4xl" />,
-      date: "2025",
-      link: "https://www.credly.com/badges/b0d61853-deee-4484-970e-19e8039e11f0/linked_in_profile"
-    },
-    {
-      title: "Attendance Hashgraph Developer",
-      issuer: "Hedera",
-      icon: <SiHedera className="text-4xl" />,
-      date: "2025",
-      link: "https://certs.hashgraphdev.com/31b49668-a189-4090-b28e-348f954add1b.pdf"
-    },
-    {
-      title: "Introduction to DevOps and Site Reliability Engineering",
-      issuer: "The Linux Foundation",
-      icon: <FaLinux className="text-4xl" />,
-      date: "2025",
-      link: "https://www.credly.com/badges/76e21dd7-e8f4-4a16-9496-56ddef217ceb/linked_in_profile"
-    },
-    {
-      title: "Docker Training Course for the Absolute Beginner",
-      issuer: "Docker",
-      icon: <SiDocker className="text-4xl" />,
-      date: "2025",
-      link: "https://learn.kodekloud.com/certificate/96fe2cb0-bd6c-4527-aef4-539860c4e893"
+      title: "English Proficiency Certificate (Duolingo English Test)",
+      issuer: "Duolingo English Test",
+      icon: <SiDuolingo className="text-4xl text-green-400" />,
+      date: "Issued Apr 2025 · Expires Apr 2027",
+      link: "https://certs.duolingo.com/d8f1jml1k74nm213",
     },
   ];
 
+  // 🎓 Scholarships Section
+  const scholarships: Scholarship[] = [
+    {
+      title: "Thomas Jefferson Scholarship Program (TJSP) – Semi-Finalist",
+      issuer: "U.S. Department of State",
+      description:
+        "Selected among the top 10% of 1,200+ applicants for a U.S. exchange program focused on computer science and leadership.",
+      date: "2025",
+      icon: <FaUniversity className="text-4xl text-blue-300" />,
+    },
+    {
+      title: "SUSI for Student Leaders Program – Semi-Finalist",
+      issuer: "U.S. Department of State",
+      description:
+        "Chosen among the top 8–10% of 1,500+ applicants for a U.S. program focused on economics and entrepreneurship.",
+      date: "2021",
+      icon: <TbAward className="text-4xl text-yellow-300" />,
+    },
+  ];
+
+  // 🌐 Languages Section
+  const languages: Language[] = [
+    { name: "Arabic", level: "Native" },
+    { name: "Spanish", level: "A2" },
+    { name: "English", level: "B2 (Duolingo English Test)" },
+    { name: "French", level: "B1" },
+  ];
+
   return (
-    <div id="certification" className="certifications-container">
-      <p className="certifications-title text-4xl md:text-5xl font-bold text-white text-center mb-12">
+    <div id="certification" className="certifications-container pt-20">
+      {/* 🧾 Certifications Section */}
+      <p className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
         Certifications
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
         {certifications.map((cert, index) => (
           <div
             key={index}
-            className="certification-card bg-white/5 p-6 rounded-xl backdrop-blur-sm flex flex-col gap-4"
+            className="certification-card bg-white/5 p-6 rounded-xl backdrop-blur-sm flex flex-col gap-4 hover:bg-white/10 transition-all"
           >
             <div className="flex items-start justify-between">
               <div className="flex-1">
@@ -80,13 +98,63 @@ const Certifications = () => {
                 </h3>
                 <p className="text-gray-400">{cert.issuer}</p>
               </div>
-              <div className="text-gray-400 ml-4 shrink-0">
-                {cert.icon}
-              </div>
+              <div className="text-gray-400 ml-4 shrink-0">{cert.icon}</div>
             </div>
             <div className="mt-auto">
               <p className="text-sm text-gray-500">{cert.date}</p>
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline text-sm"
+              >
+                View Credential
+              </a>
             </div>
+          </div>
+        ))}
+      </div>
+
+      {/* 🎓 Scholarships Section */}
+      <p className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
+        Scholarships & Achievements
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
+        {scholarships.map((scholar, index) => (
+          <div
+            key={index}
+            className="bg-white/5 p-6 rounded-xl backdrop-blur-sm flex flex-col gap-3 hover:bg-white/10 transition-all"
+          >
+            <div className="flex items-start justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {scholar.title}
+                </h3>
+                <p className="text-gray-400">{scholar.issuer}</p>
+                <p className="text-sm text-gray-500 mt-2">
+                  {scholar.description}
+                </p>
+              </div>
+              <div className="text-gray-400 ml-4 shrink-0">{scholar.icon}</div>
+            </div>
+            <p className="text-sm text-gray-500 mt-auto">{scholar.date}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* 🌐 Languages Section */}
+      <p className="text-4xl md:text-5xl font-bold text-white text-center mb-6">
+        Languages
+      </p>
+      <div className="flex flex-wrap justify-center gap-6 mb-20">
+        {languages.map((lang, index) => (
+          <div
+            key={index}
+            className="bg-white/5 p-4 rounded-xl backdrop-blur-sm flex justify-between items-center hover:bg-white/10 transition-all min-w-[200px]"
+          >
+            <span className="text-white font-semibold">{lang.name}</span>
+            <span className="text-gray-400">{lang.level}</span>
           </div>
         ))}
       </div>

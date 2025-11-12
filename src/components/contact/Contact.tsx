@@ -13,7 +13,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = `mailto:ilyesarous9645@gmail.com?subject=Contact from ${formData.name}&body=${formData.message}`;
+    window.location.href = `mailto:mahassendrira2003@gmail.com?subject=Contact from ${formData.name}&body=${formData.message}`;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -75,14 +75,14 @@ const Contact = () => {
 
       <div className="social-links">
         <a
-          href="mailto:ilyesarous9645@gmail.com"
+          href="mailto:mahassendrira2003@gmail.com"
           className="social-icon"
           aria-label="Email"
         >
           <HiOutlineMail />
         </a>
         <a
-          href="https://www.linkedin.com/in/ilyes-arous"
+          href="https://www.linkedin.com/in/mahassen-drira-06686b1bb/"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
@@ -91,7 +91,7 @@ const Contact = () => {
           <BsLinkedin />
         </a>
         <a
-          href="https://github.com/ilyesarous"
+          href="https://github.com/Mahsouna-Drira"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
@@ -100,7 +100,7 @@ const Contact = () => {
           <BsGithub />
         </a>
         <a
-          href="tel:+21621503300"
+          href="tel:+21693125188"
           className="social-icon"
           aria-label="Phone"
         >

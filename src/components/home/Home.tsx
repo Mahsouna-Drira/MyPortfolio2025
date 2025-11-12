@@ -1,6 +1,6 @@
 import "./Home.css";
-import profilePic from "../../assets/images/profilePic.webp";
-import cv from "../../assets/pdf/cv.pdf";
+import profilePic from "../../assets/images/profilepic.jpg";
+import cv from "../../assets/pdf/Mahassen-Drira-English-CV.pdf";
 import CustomButton from "../../tools/buttons/CustomButton";
 import { HiDownload } from "react-icons/hi";
 import { IoLogoGithub } from "react-icons/io";
@@ -13,13 +13,12 @@ const Home = () => {
       className="home-container flex justify-center items-center h-screen gap-16 px-6"
     >
       <div className="flex-2 flex flex-col gap-6">
-        <h1 className="text-7xl text-white">Ilyes Arous</h1>
+        <h1 className="text-7xl text-white">Mahassen Drira</h1>
         <p className="text-3xl font-semibold text-gray-400">
-          Full-stack & DevOps Engineer
+          Software Engineering Student
         </p>
         <p className="text-xl font-semibold text-gray-500 max-w-xl leading-relaxed">
-          Full-stack & DevOps engineer obsessed with automation, container
-          orchestration, and scalable cloud architectures.
+        Data and AI enthusiast driven by intelligent automation, predictive modeling, and real-world machine learning applications.
         </p>
         <div className="flex flex-wrap gap-3">
           <a href={cv} download aria-label="Download CV">
@@ -30,7 +29,7 @@ const Home = () => {
             />
           </a>
           <a
-            href="https://www.linkedin.com/in/ilyes-arous/"
+            href="https://www.linkedin.com/in/mahassen-drira/"
             aria-label="LinkedIn"
             target="_blank"
             rel="noopener noreferrer"
@@ -39,7 +38,7 @@ const Home = () => {
           </a>
 
           <a
-            href="https://github.com/ilyesarous"
+            href="https://github.com/Mahsouna-Drira"
             aria-label="GitHub"
             target="_blank"
             rel="noopener noreferrer"

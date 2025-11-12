@@ -25,7 +25,7 @@ const NavBar = () => {
 
   return (
     <nav className={`navbar fixed top-0 left-0 w-full h-16 flex items-center justify-between px-8 z-50 ${scrolled ? "scrolled" : ""}`}>
-      <div className="text-white font-bold text-xl">IA</div>
+      <div className="text-white font-bold text-xl">MD</div>
       <button 
         className={`hamburger ${isMenuOpen ? "active" : ""}`}
         onClick={() => setIsMenuOpen(!isMenuOpen)}

@@ -1,66 +1,92 @@
 import { useState } from "react";
 import "./Projects.css";
-import { FaGithub } from "react-icons/fa";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import {
+  FaGithub,
+  FaChevronDown,
+  FaChevronUp,
+  FaVrCardboard,
+  FaCode,
+  FaRobot,
+  FaDatabase,
+} from "react-icons/fa";
+import {
+  SiPython,
+  SiScikitlearn,
+  SiPandas,
+  SiUnity,
+  SiOpencv,
+  SiTensorflow,
+  SiAutodesk,
+  SiReact,
+  SiFastapi,
+} from "react-icons/si";
 
 interface Project {
   title: string;
+  date: string;
   short: string;
   description: string;
-  details: string[];
-  technologies: string[];
+  technologies: { name: string; icon?: React.ReactNode }[];
   github: string;
 }
 
 const Projects = () => {
   const projects: Project[] = [
     {
-      title: "Petopia",
-      short:
-        "A full-featured pet platform for adoption, events, e-commerce and virtual vet services.",
+      title: "SmartALPR – Tunisian ALPR with RAG & Legal AI",
+      date: "10/2025 – Present",
+      short: "Real-time Tunisian license plate recognition with AI compliance & reporting.",
       description:
-        "Petopia is an end-to-end web platform that helps pet owners and adopters connect: it provides AI-based matching to recommend suitable pets, an adoption workflow, community events, a shop for supplies, virtual and in-person vet booking, and a blog/social area for posts and media.",
-      details: [
-        "Phase 1 – Built a private OpenStack cloud (Keystone, Nova, Neutron, Cinder, Swift, Horizon) on 7 laptops; automated provisioning with Heat.",
-        "Phase 2 – Developed Petopia: Spring Boot backend + Angular frontend, AI-powered matching, e-commerce, blog, events and virtual vet modules.",
-        "Phase 3 – Containerized with Docker and deployed on the OpenStack cloud using Kubernetes; used Argo CD for GitOps deployment.",
-      ],
+        "Built a real-time ALPR system for Tunisian plates using YOLO + CRNN for detection & OCR, with RAG + LLM (LlamaIndex + Mistral) for legal validation against ATTT rules. FastAPI backend, mock DB, and React chatbot deliver anomaly detection and sourced legal reports.",
       technologies: [
-        "Spring Boot",
-        "Angular",
-        "OpenStack",
-        "Kubernetes",
-        "Docker",
-        "Argo CD",
-        "MySQL",
+        { name: "YOLO", icon: <FaRobot /> },
+        { name: "CRNN", icon: <SiTensorflow /> },
+        { name: "RAG", icon: <FaDatabase /> },
+        { name: "LLM", icon: <FaRobot /> },
+        { name: "FastAPI", icon: <SiFastapi /> },
+        { name: "React", icon: <SiReact /> },
       ],
-      github: "https://github.com/ilyesarous/petopia",
+      github: "https://github.com/yourusername/smartalpr-tunisia",
     },
     {
-      title: "Job Finder",
-      short:
-        "A job and internship board where companies post opportunities and candidates apply.",
+      title: "Insurance Claims Prediction Model",
+      date: "10/2023 – 05/2024",
+      short: "ML model predicting insurance claims from structural & location data.",
       description:
-        "Job Finder is a focused recruitment platform where companies publish vacancies and internships while candidates search, apply and manage their applications. Built with a modern TypeScript stack, it includes authentication, posting workflows, application tracking and notification features to streamline hiring.",
-      details: [
-        "Platform for companies to publish jobs/internships and for candidates to apply and track applications.",
-        "Implemented authentication, posting workflow, application tracking and notifications.",
+        "Developed a classification model using Scikit-learn & Pandas on 7,000+ samples. Optimized precision/recall for real-world insurance claim prediction.",
+      technologies: [
+        { name: "Python", icon: <SiPython /> },
+        { name: "Scikit-learn", icon: <SiScikitlearn /> },
+        { name: "Pandas", icon: <SiPandas /> },
       ],
-      technologies: ["Next.js", "NestJS", "TypeScript", "PostgreSQL"],
-      github: "https://github.com/ilyesarous/job-internship-finder",
+      github: "https://github.com/yourusername/datamining-project",
     },
     {
-      title: "Gym Plus",
-      short:
-        "Web + desktop platform for gym communities, AI/personal trainers, e-commerce and events.",
+      title: "VR Driving Simulator",
+      date: "12/2024 – 02/2025",
+      short: "Immersive VR driving experience built for Oculus Quest 2.",
       description:
-        "Gym Plus combines a desktop application and a web platform to engage gym communities: users receive personalized training regimens from human or AI trainers, meal and recipe suggestions, social feeds to share progress, messaging, event organization and an integrated shop for supplements and equipment.",
-      details: [
-        "Desktop app built with JavaFX and web platform built with Symfony.",
-        "Features include personalized training plans, recipe suggestions, social posts, messaging, shop and events.",
+        "Designed a realistic driving simulator in Unity with C# and 3D assets from Fusion 360. Optimized for immersion and precision on VR headset.",
+      technologies: [
+        { name: "Unity", icon: <SiUnity /> },
+        { name: "C#", icon: <FaCode /> },
+        { name: "VR", icon: <FaVrCardboard /> },
+        { name: "Fusion 360", icon: <SiAutodesk /> },
       ],
-      technologies: ["JavaFX", "Symfony", "MySQL", "Docker"],
-      github: "https://github.com/Jev1337/GymPlus",
+      github: "https://github.com/yourusername/vr-driving-simulation",
+    },
+    {
+      title: "Trash Intelligent – Smart Recycling",
+      date: "10/2020 – 05/2021",
+      short: "AI-powered waste classification using real-time vision.",
+      description:
+        "Built a smart recycling system with OpenCV & TensorFlow for real-time object detection and material classification.",
+      technologies: [
+        { name: "Python", icon: <SiPython /> },
+        { name: "OpenCV", icon: <SiOpencv /> },
+        { name: "TensorFlow", icon: <SiTensorflow /> },
+      ],
+      github: "https://github.com/yourusername/trash-intelligent",
     },
   ];
 
@@ -70,7 +96,6 @@ const Projects = () => {
     setExpanded(expanded === index ? null : index);
   };
 
-  // Helper to get first two letters (initials)
   const getInitials = (title: string): string => {
     const words = title.trim().split(" ");
     if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase();
@@ -79,9 +104,9 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-section">
-      <p className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
         Projects
-      </p>
+      </h2>
       <div className="projects-grid">
         {projects.map((p, i) => (
           <article
@@ -92,9 +117,12 @@ const Projects = () => {
             <div className="thumbnail-text">{getInitials(p.title)}</div>
 
             <div className="card-head">
-              <h3 id={`proj-${i}-title`} className="project-title">
-                {p.title}
-              </h3>
+              <div>
+                <h3 id={`proj-${i}-title`} className="project-title">
+                  {p.title}
+                </h3>
+                <p className="project-date text-gray-400 text-sm">{p.date}</p>
+              </div>
               <a
                 href={p.github}
                 target="_blank"
@@ -116,11 +144,11 @@ const Projects = () => {
             >
               {expanded === i ? (
                 <>
-                  Hide Details <FaChevronUp className="chevron-icon" />
+                  Hide Tools <FaChevronUp className="chevron-icon" />
                 </>
               ) : (
                 <>
-                  Show Details <FaChevronDown className="chevron-icon" />
+                  Show Tools <FaChevronDown className="chevron-icon" />
                 </>
               )}
             </button>
@@ -130,19 +158,17 @@ const Projects = () => {
                 expanded === i ? "expanded" : ""
               }`}
             >
-              <ul className="project-details">
-                {p.details.map((d, idx) => (
-                  <li key={idx}>{d}</li>
+              <div className="project-techs flex flex-wrap gap-2">
+                {p.technologies.map((t, idx) => (
+                  <span
+                    key={idx}
+                    className="tech-pill inline-flex items-center gap-1 text-xs"
+                  >
+                    {t.icon}
+                    <span>{t.name}</span>
+                  </span>
                 ))}
-              </ul>
-            </div>
-
-            <div className="project-techs">
-              {p.technologies.map((t, idx) => (
-                <span className="tech-pill" key={idx}>
-                  {t}
-                </span>
-              ))}
+              </div>
             </div>
           </article>
         ))}
