@@ -1,6 +1,6 @@
 import "./Home.css";
 import profilePic from "../../assets/images/profilepic.jpg";
-import cv from "../../assets/pdf/Mahassen-Drira-English-CV.pdf";
+import cv from "../../assets/pdf/Mahassen-Drira-AI PFE Internships-Resume.pdf";
 import CustomButton from "../../tools/buttons/CustomButton";
 import { HiDownload } from "react-icons/hi";
 import { IoLogoGithub } from "react-icons/io";
